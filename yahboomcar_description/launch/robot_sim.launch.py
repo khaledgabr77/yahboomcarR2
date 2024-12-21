@@ -55,15 +55,16 @@ def generate_launch_description():
 
 
     # Bridge ROS topics and Gazebo messages for establishing communication
-    # bridge = Node(
-    #     package='ros_gz_bridge',
-    #     executable='parameter_bridge',
-    #     parameters=[{
-    #         'config_file': os.path.join(pkg_project_bringup, 'config', 'ros_gz_bridge.yaml'),
-    #         'qos_overrides./tf_static.publisher.durability': 'transient_local',
-    #     }],
-    #     output='screen'
-    # )
+    bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        parameters=[{
+            'config_file': os.path.join(pkg_project_description, 'config', 'ros_gz_bridge.yaml'),
+            'qos_overrides./tf_static.publisher.durability': 'transient_local',
+        }],
+        output='screen'
+    )
+    
     rviz_node = Node(
         package='rviz2',
         executable='rviz2',
@@ -73,7 +74,7 @@ def generate_launch_description():
     )
     return LaunchDescription([
         gz_sim,
-        # bridge,
+        bridge,
         robot_state_publisher,
         rviz_node,
         joint_state_publisher_node
