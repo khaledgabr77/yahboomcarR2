@@ -37,29 +37,6 @@
           </mesh>
         </geometry>
       </collision>
-
-      <!-- <visual name='base_link_fixed_joint_lump__camera_link_visual_1'>
-        <pose>0.095116999999999993 0 0.09955 0 0.0057171000000000019 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>package://yahboomcar_description/models/ackermann_r2_car/meshes/camera_link_R2.STL</uri>
-          </mesh>
-        </geometry>
-        <material>
-          <diffuse>0.102941252 0.102941252 0.102941252 1</diffuse>
-          <ambient>0.102941252 0.102941252 0.102941252 1</ambient>
-        </material>
-      </visual>
-      <collision name='base_link_fixed_joint_lump__camera_link_collision_1'>
-        <pose>0.095116999999999993 0 0.09955 0 0.0057171000000000019 0</pose>
-        <geometry>
-          <mesh>
-            <scale>1 1 1</scale>
-            <uri>package://yahboomcar_description/models/ackermann_r2_car/meshes/camera_link_R2.STL</uri>
-          </mesh>
-        </geometry>
-      </collision> -->
     </link>
 
     <link name='lidar_link'>
@@ -109,12 +86,42 @@
         <update_rate>10</update_rate>
       </sensor>
     </link>
-    
+
     <joint name='base_to_lidar_joint' type='fixed'>
       <pose>0.012548 0 0.1 0 0 0</pose>
       <parent>base_link</parent>
       <child>lidar_link</child>
     </joint>
+
+    <!-- <link name='camera_link'>
+      <visual name='base_link_fixed_joint_lump__camera_link_visual_1'>
+        <pose>0.1284 0 0.07444 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://yahboomcar_description/models/ackermann_r2_car/meshes/cam_case_and_stand.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <diffuse>0.102941252 0.102941252 0.102941252 1</diffuse>
+          <ambient>0.102941252 0.102941252 0.102941252 1</ambient>
+        </material>
+      </visual>
+      <collision name='base_link_fixed_joint_lump__camera_link_collision_1'>
+        <pose>0.1284 0 0.07444 0 0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>package://yahboomcar_description/models/ackermann_r2_car/meshes/cam_case_and_stand.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name='base_to_camera_joint' type='fixed'>
+      <pose>0.1284 0 0.07444 0 0 0</pose>
+      <parent>base_link</parent>
+      <child>camera_link</child>
+    </joint> -->
 
     <joint name='back_left_joint' type='revolute'>
       <pose relative_to='base_link'>-0.11607000000000001 0.084250000000000005 0.012500000000000001 0 0 0</pose>
