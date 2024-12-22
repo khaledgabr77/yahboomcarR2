@@ -3,7 +3,7 @@
   <model name='race_track'>
     <self_collide>false</self_collide>
     <static>true</static>
-    <link name='base_link'>
+    <link name='race_track_link'>
       <inertial>
         <pose>0.64631004421377602 -1.60579298314831 0.78294540956772607 0 0 0</pose>
         <mass>166.6218211565286</mass>
@@ -16,7 +16,7 @@
           <izz>417.93272592604683</izz>
         </inertia>
       </inertial>
-      <collision name='base_link_collision'>
+      <collision name='race_track_collision'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
@@ -25,7 +25,7 @@
           </mesh>
         </geometry>
       </collision>
-      <visual name='base_link_visual'>
+      <visual name='race_track_visual'>
         <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>

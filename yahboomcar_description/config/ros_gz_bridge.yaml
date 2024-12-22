@@ -47,11 +47,11 @@
 #   gz_type_name: "gz.msgs.Pose_V"
 #   direction: GZ_TO_ROS
 
-# - ros_topic_name: "/rgb_image"
-#   gz_topic_name: "/world/default/model/mrbuggy3/link/camera_link/sensor/camera/image"
-#   ros_type_name: "sensor_msgs/msg/Image"
-#   gz_type_name: "gz.msgs.Image"
-#   direction: GZ_TO_ROS
+- ros_topic_name: "/rgb_image"
+  gz_topic_name: "/rgb_image"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: GZ_TO_ROS
   
 # - ros_topic_name: "/camera_info"
 #   gz_topic_name: "/world/default/model/mrbuggy3/link/camera_link/sensor/camera/camera_info"

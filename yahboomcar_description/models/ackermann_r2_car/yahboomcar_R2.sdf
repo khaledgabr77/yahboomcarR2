@@ -93,35 +93,56 @@
       <child>lidar_link</child>
     </joint>
 
-    <!-- <link name='camera_link'>
+    <link name='camera_link'>
       <visual name='base_link_fixed_joint_lump__camera_link_visual_1'>
-        <pose>0.1284 0 0.07444 0 0 0</pose>
+        <pose>0.1284 0 0.07444 1.57 0 1.57</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>package://yahboomcar_description/models/ackermann_r2_car/meshes/cam_case_and_stand.STL</uri>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>package://yahboomcar_description/models/ackermann_r2_car/meshes/RaspberryPI_AI_Camera.stl</uri>
           </mesh>
         </geometry>
         <material>
-          <diffuse>0.102941252 0.102941252 0.102941252 1</diffuse>
-          <ambient>0.102941252 0.102941252 0.102941252 1</ambient>
+          <diffuse>0 0 1 1</diffuse>
+          <ambient>0 0 1 1</ambient>
         </material>
       </visual>
       <collision name='base_link_fixed_joint_lump__camera_link_collision_1'>
-        <pose>0.1284 0 0.07444 0 0 0</pose>
+        <pose>0.1284 0 0.07444 1.57 0 1.57</pose>
         <geometry>
           <mesh>
-            <scale>1 1 1</scale>
-            <uri>package://yahboomcar_description/models/ackermann_r2_car/meshes/cam_case_and_stand.STL</uri>
+            <scale>0.001 0.001 0.001</scale>
+            <uri>package://yahboomcar_description/models/ackermann_r2_car/meshes/RaspberryPI_AI_Camera.stl</uri>
           </mesh>
         </geometry>
       </collision>
+
+      <sensor name="camera" type="camera">
+        <pose>0.1284 0 0.07444 0 0 0</pose>
+        <camera>
+          <horizontal_fov>1.367</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+          </image>
+          <clip>
+            <near>0.05</near>
+            <far>200</far>
+          </clip>
+        </camera>
+        <!-- Set frame ID appropriately, typically 'camera_link' -->
+        <gz_frame_id>camera_link</gz_frame_id>
+        <always_on>1</always_on>
+        <update_rate>10</update_rate>
+        <visualize>1</visualize>
+        <topic>rgb_image</topic>
+      </sensor>
     </link>
     <joint name='base_to_camera_joint' type='fixed'>
-      <pose>0.1284 0 0.07444 0 0 0</pose>
+      <pose>0.1284 0 0.07444 1.57 0 1.57</pose>
       <parent>base_link</parent>
       <child>camera_link</child>
-    </joint> -->
+    </joint>
 
     <joint name='back_left_joint' type='revolute'>
       <pose relative_to='base_link'>-0.11607000000000001 0.084250000000000005 0.012500000000000001 0 0 0</pose>
