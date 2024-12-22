@@ -150,9 +150,10 @@
     </include>
 
     <include>
-      <pose>-0.5 0 0 0 0 0</pose>
-      <!-- <uri>model://yahboomcar_description/race_track/race_track.sdf</uri> -->
-      <uri>model://yahboomcar_description/models/race_track_2/race_track_2.sdf</uri>
+      <pose>0 0 0 0 0 0</pose>
+      <uri>model://yahboomcar_description/models/race_track/race_track.sdf</uri>
+      <!-- <pose>-0.5 0 0 0 0 0</pose>
+      <uri>model://yahboomcar_description/models/race_track_2/race_track_2.sdf</uri> -->
     </include>  
 
     <!-- <joint name="race_track_to_car" type="fixed">

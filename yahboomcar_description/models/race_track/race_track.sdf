@@ -22,7 +22,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/race_track.STL</uri>
+            <uri>package://yahboomcar_description/models/race_track/meshes/race_track.STL</uri>
           </mesh>
         </geometry>
       </collision>
@@ -31,7 +31,7 @@
         <geometry>
           <mesh>
             <scale>1 1 1</scale>
-            <uri>meshes/race_track.STL</uri>
+            <uri>package://yahboomcar_description/models/race_track/meshes/race_track.STL</uri>
           </mesh>
         </geometry>
         <material>
