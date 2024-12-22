@@ -46,7 +46,11 @@ ros2 launch yahboomcar_description robot_sim.launch.py
 ```
 
 This will initialize the simulation environment and load the YahboomcarR2 model.
+### Move the Robot
 
+```bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard 
+```
 ---
 
 ## Additional Information
